@@ -5,7 +5,7 @@ Resources:
   ArtifactBucket:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: website-artifacts
+      BucketName: website-artifacts-${{ secrets.AWS_ACCESS_KEY_ID }}
       WebsiteConfiguration:
         IndexDocument: index.html
         ErrorDocument: error.html
